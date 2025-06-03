@@ -4,18 +4,18 @@ const Education = () => {
   const education = [
     {
       degree: "Bachelor of Technology (B.Tech)",
-      field: "Computer Science and Engineering",
+      field: "Electronics and Communication Engineering",
       institution: "National Institute of Technology (NIT) Warangal",
-      duration: "2001 - 2005",
-      grade: "First Class with Distinction",
+      duration: "2000 - 2004",
+      grade: "First Class",
       achievements: [
-        "Graduated with First Class with Distinction",
+        
         "Secured Top 34 rank in EAMCET entrance examination",
-        "Active member of Computer Science Society",
+        "Active member of Electronics and Communications Society",
         "Led multiple technical projects and hackathons",
         "Participated in inter-collegiate programming competitions"
       ],
-      description: "Comprehensive computer science education covering fundamentals of programming, algorithms, data structures, database systems, and software engineering principles.",
+      description: "Comprehensive Electronics and Communication education along with fundamentals of programming, algorithms, data structures, database systems, and software engineering principles.",
       logo: "🎓"
     },
     {

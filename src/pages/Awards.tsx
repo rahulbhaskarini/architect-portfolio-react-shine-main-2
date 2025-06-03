@@ -48,10 +48,10 @@ const Awards = () => {
     },
     {
       title: "Technical Excellence Award",
-      organization: "Wipro",
+      organization: "Cognizant",
       year: "2017",
       category: "Technical Innovation",
-      description: "Honored for developing cutting-edge SPFx solutions and establishing best practices for modern SharePoint development.",
+      description: "Honored for developing cutting-edge Automation scripts and establishing best practices for SharePoint Migration projects",
       impact: "Framework adopted across 15+ projects, improving development efficiency by 50%",
       project: "Modern SharePoint Development Framework",
       icon: "💡",
@@ -60,7 +60,7 @@ const Awards = () => {
     {
       title: "EAMCET Top 34 Rank Achievement",
       organization: "Andhra Pradesh State Government",
-      year: "2001",
+      year: "2000",
       category: "Academic Excellence",
       description: "Secured rank 34 in the highly competitive EAMCET entrance examination among over 200,000 candidates.",
       impact: "Secured admission to premier engineering college - NIT Warangal",

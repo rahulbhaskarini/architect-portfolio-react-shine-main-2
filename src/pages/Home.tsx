@@ -17,6 +17,28 @@ import {
   Server 
 } from "lucide-react";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faMicrosoft,       // Microsoft 365 / Power Platform umbrella
+  faReact,           // React.js
+  faNodeJs,          // Node.js
+  faGithub,          // fallback or for SPFx (GitHub-based dev)
+} from "@fortawesome/free-brands-svg-icons";
+
+import {
+  faBolt,            // Power Apps
+  faChartBar,        // Power BI
+  faProjectDiagram,  // Power Automate
+  faCogs,            // SPFx
+  faTerminal,        // PowerShell
+  faCloud,           // Azure
+  faBrain,           // GenAI
+  faShareAlt,        // SharePoint
+  faBoxes,           // Microsoft 365 alternative
+  faFileCode,        // TypeScript
+  faServer           // Node.js (if you prefer over brand icon)
+} from "@fortawesome/free-solid-svg-icons";
+
 const Home = () => {
   const scrollToNext = () => {
     window.scrollTo({
@@ -25,20 +47,27 @@ const Home = () => {
     });
   };
 
+  // Define technology expertise with FontAwesome icons
+  // Using FontAwesome for better consistency and flexibility
+  // You can also use Lucide icons if you prefer, but FontAwesome is more comprehensive for this use case.
+  // Note: Ensure you have the FontAwesome icons installed and configured in your project.
+  // You can install FontAwesome with: npm install --save @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons @fortawesome/free-brands-svg-icons
+
   const technologies = [
-    { name: "Power Apps", icon: Zap },
-    { name: "Power BI", icon: BarChart3 },
-    { name: "Power Automate", icon: GitBranch },
-    { name: "React.js", icon: Code },
-    { name: "SPFx", icon: Settings },
-    { name: "PowerShell", icon: Terminal },
-    { name: "Azure", icon: Cloud },
-    { name: "GenAI", icon: Brain },
-    { name: "SharePoint", icon: Share2 },
-    { name: "Microsoft 365", icon: Building },
-    { name: "TypeScript", icon: FileCode },
-    { name: "Node.js", icon: Server }
-  ];
+  { name: "Power Apps", icon: faBolt },
+  { name: "Power BI", icon: faChartBar },
+  { name: "Power Automate", icon: faProjectDiagram },
+  { name: "React.js", icon: faReact },
+  { name: "SPFx", icon: faCogs },
+  { name: "PowerShell", icon: faTerminal },
+  { name: "Azure", icon: faCloud },
+  { name: "GenAI", icon: faBrain },
+  { name: "SharePoint", icon: faShareAlt },
+  { name: "Microsoft 365", icon: faBoxes }, // or use faMicrosoft
+  { name: "TypeScript", icon: faFileCode },
+  { name: "Node.js", icon: faNodeJs }
+];
+
 
   return (
     <div className="min-h-screen relative overflow-hidden">
@@ -72,7 +101,7 @@ const Home = () => {
         <div className="text-center animate-fade-in">
           {/* Enhanced Headline */}
           <div className="mb-6">
-            <p className="text-lg sm:text-xl text-cyan-300 mb-2 font-medium">Hi, I'm</p>
+           
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-4 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight">
               Rahul Bhaskarini
             </h1>
@@ -144,23 +173,20 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
-            {technologies.map((tech, index) => {
-              const IconComponent = tech.icon;
-              return (
-                <div
-                  key={tech.name}
-                  className="text-center p-4 bg-card rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105 animate-fade-in"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg mx-auto mb-3 flex items-center justify-center text-white">
-                    <IconComponent className="w-6 h-6" />
-                  </div>
-                  <div className="text-sm font-medium">{tech.name}</div>
-                </div>
-              );
-            })}
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+        {technologies.map((tech, index) => (
+          <div
+            key={tech.name}
+            className="text-center p-4 bg-card rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105 animate-fade-in"
+            style={{ animationDelay: `${index * 100}ms` }}
+          >
+            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg mx-auto mb-3 flex items-center justify-center text-white">
+              <FontAwesomeIcon icon={tech.icon} className="w-6 h-6" />
+            </div>
+            <div className="text-sm font-medium">{tech.name}</div>
           </div>
+        ))}
+      </div>
         </div>
       </section>
     </div>

@@ -175,7 +175,7 @@ const Experience = () => {
               <div className="text-sm text-muted-foreground">Projects Delivered</div>
             </div>
             <div className="text-center p-6 bg-card rounded-lg shadow-sm border border-green-100 dark:border-green-900/30">
-              <div className="text-3xl font-bold text-green-600 mb-2">500+</div>
+              <div className="text-3xl font-bold text-green-600 mb-2">100+</div>
               <div className="text-sm text-muted-foreground">Professionals Trained</div>
             </div>
           </div>

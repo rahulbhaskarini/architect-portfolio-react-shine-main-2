@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Mail, MessageSquare, Send } from "lucide-react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -91,41 +93,39 @@ const Contact = () => {
               </a>
             </div>
           </div>
+ <div className="flex items-center space-x-4 p-4 bg-card rounded-lg shadow-sm border border-rose-100 dark:border-rose-900/30">
+      <div className="w-12 h-12 bg-gradient-to-br from-rose-500 to-red-500 rounded-lg flex items-center justify-center text-white">
+        <FontAwesomeIcon icon={faLinkedin} className="w-6 h-6" />
+      </div>
+      <div>
+        <h3 className="font-semibold">LinkedIn</h3>
+        <a
+          href="https://linkedin.com/in/rahulbhaskarini"
+          className="text-muted-foreground hover:underline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          linkedin.com/in/rahulbhaskarini
+        </a>
+      </div>
+    </div>
 
-          <div className="flex items-center space-x-4 p-4 bg-card rounded-lg shadow-sm border border-rose-100 dark:border-rose-900/30">
-            <div className="w-12 h-12 bg-gradient-to-br from-rose-500 to-red-500 rounded-lg flex items-center justify-center text-white">
-              <MessageSquare className="w-6 h-6" />
-            </div>
-            <div>
-              <h3 className="font-semibold">LinkedIn</h3>
-              <a
-                href="https://linkedin.com/in/rahulbhaskarini"
-                className="text-muted-foreground hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                linkedin.com/in/rahulbhaskarini
-              </a>
-            </div>
-          </div>
-
-
-           <div className="flex items-center space-x-4 p-4 bg-card rounded-lg shadow-sm border border-rose-100 dark:border-rose-900/30">
-              <div className="w-12 h-12 bg-gradient-to-br from-rose-500 to-red-500 rounded-lg flex items-center justify-center text-white">
-                  <Send className="w-6 h-6" />
-              </div>
-              <div>
-              <h3 className="font-semibold">GitHub</h3>
-              <a
-                href="https://github.com/rahulbhaskarini"
-                className="text-muted-foreground hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                github.com/rahulbhaskarini
-              </a>
-            </div>
-          </div>
+    <div className="flex items-center space-x-4 p-4 bg-card rounded-lg shadow-sm border border-rose-100 dark:border-rose-900/30">
+      <div className="w-12 h-12 bg-gradient-to-br from-rose-500 to-red-500 rounded-lg flex items-center justify-center text-white">
+        <FontAwesomeIcon icon={faGithub} className="w-6 h-6" />
+      </div>
+      <div>
+        <h3 className="font-semibold">GitHub</h3>
+        <a
+          href="https://github.com/rahulbhaskarini"
+          className="text-muted-foreground hover:underline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          github.com/rahulbhaskarini
+        </a>
+      </div>
+    </div>
 
          <div className="flex items-center space-x-4 p-4 bg-card rounded-lg shadow-sm border border-rose-100 dark:border-rose-900/30">
           <div className="w-12 h-12 bg-gradient-to-br from-rose-500 to-red-500 rounded-lg flex items-center justify-center text-white">
