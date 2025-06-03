@@ -53,21 +53,27 @@ const Home = () => {
   // Note: Ensure you have the FontAwesome icons installed and configured in your project.
   // You can install FontAwesome with: npm install --save @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons @fortawesome/free-brands-svg-icons
 
-  const technologies = [
-  { name: "Power Apps", icon: faBolt },
-  { name: "Power BI", icon: faChartBar },
-  { name: "Power Automate", icon: faProjectDiagram },
-  { name: "React.js", icon: faReact },
-  { name: "SPFx", icon: faCogs },
-  { name: "PowerShell", icon: faTerminal },
-  { name: "Azure", icon: faCloud },
-  { name: "GenAI", icon: faBrain },
-  { name: "SharePoint", icon: faShareAlt },
-  { name: "Microsoft 365", icon: faBoxes }, // or use faMicrosoft
-  { name: "TypeScript", icon: faFileCode },
-  { name: "Node.js", icon: faNodeJs }
-];
+  
 
+const technologies = [
+  { name: "AI Builder", icon: "/public/assets/icons/Aibuilder.svg" },
+  { name: "Azure", icon: "/public/assets/icons/Microsoft_azure.svg" },
+  { name: "Copilot", icon: "/public/assets/icons/Copilot.svg" },
+  { name: "Copilot Studio", icon: "/public/assets/icons/CopilotStudio.svg" },
+  { name: "Dataverse", icon: "/public/assets/icons/Dataverse.svg" },
+  { name: "Microsoft 365", icon: "/public/assets/icons/microsoft365.svg" },
+  { name: "Node.js", icon: "/public/assets/icons/node-js.svg" },
+  { name: "Power Apps", icon: "/public/assets/icons/powerapps.svg" },
+  { name: "Power Automate", icon: "/public/assets/icons/powerautomate.svg" },
+  { name: "Power BI", icon: "/public/assets/icons/powerbi.svg" },
+  { name: "PowerFx", icon: "/public/assets/icons/PowerFx.svg" },
+  { name: "PowerPages", icon: "/public/assets/icons/PowerPages.svg" },
+  { name: "PowerShell", icon: "/public/assets/icons/powershell.svg" },
+  { name: "React.js", icon: "/public/assets/icons/react.svg" },
+  { name: "SharePoint", icon: "/public/assets/icons/sharepoint.svg" },
+  { name: "SPFx", icon: "/public/assets/icons/SharePointFramework.svg" },
+  { name: "TypeScript", icon: "/public/assets/icons/typescript.svg" }
+];
 
   return (
     <div className="min-h-screen relative overflow-hidden">
@@ -181,7 +187,8 @@ const Home = () => {
             style={{ animationDelay: `${index * 100}ms` }}
           >
             <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg mx-auto mb-3 flex items-center justify-center text-white">
-              <FontAwesomeIcon icon={tech.icon} className="w-6 h-6" />
+              <img src={tech.icon} alt={tech.name} className="w-6 h-6 object-contain" />
+
             </div>
             <div className="text-sm font-medium">{tech.name}</div>
           </div>
