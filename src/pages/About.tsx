@@ -54,16 +54,14 @@ const About = () => {
             <div className="animate-fade-in">
               <div className="relative">
                 <div className="w-80 h-80 bg-gradient-to-br from-orange-100 via-amber-100 to-red-100 dark:from-orange-900/30 dark:via-amber-900/30 dark:to-red-900/30 rounded-2xl shadow-xl flex items-center justify-center border-4 border-white dark:border-gray-800">
-                  <User className="w-32 h-32 text-orange-400/70" />
+                 <img src="/assets/RahulBhaskarini4.png" alt="Rahul Bhaskarini" className="w-64 h-64 rounded-full object-cover" />
                 </div>
                 {/* Decorative elements around photo */}
                 <div className="absolute -top-4 -right-4 w-8 h-8 bg-orange-400 rounded-full blur-sm opacity-60"></div>
                 <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-amber-400 rounded-full blur-sm opacity-60"></div>
                 <div className="absolute top-1/4 -left-6 w-4 h-4 bg-red-400 rounded-full blur-sm opacity-40"></div>
               </div>
-              <p className="text-center text-sm text-muted-foreground mt-4 italic">
-                Professional photo coming soon
-              </p>
+             
             </div>
 
             {/* Quick Introduction */}
