@@ -131,7 +131,7 @@ const Contact = () => {
          <div className="flex items-center space-x-4 p-4 bg-card rounded-lg shadow-sm border border-rose-100 dark:border-rose-900/30">
           <div className="w-12 h-12 bg-gradient-to-br from-rose-500 to-red-500 rounded-lg flex items-center justify-center text-white">
             
-            <img src="/public/assets/icons/RahulLogo.svg" alt="Rahul Bhaskarini Logo" className="w-6 h-6"/>
+            <img src="/assets/RahulLogo.svg" alt="Rahul Bhaskarini Logo" className="w-6 h-6"/>
           </div>
           <div>
             <h3 className="font-semibold">Website</h3>

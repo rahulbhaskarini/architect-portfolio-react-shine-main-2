@@ -50,7 +50,7 @@ const Header = () => {
             to="/"
             className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:scale-105 transition-transform duration-200"
           >
-                <img src="/public/assets/icons/RahulLogo.svg" alt="Rahul Bhaskarini Logo" className="h-10 w-auto" />
+                <img src="/assets/RahulLogo.svg" alt="Rahul Bhaskarini Logo" className="h-10 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
