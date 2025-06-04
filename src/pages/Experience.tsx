@@ -1,11 +1,14 @@
 
-import { Calendar, Users, Building } from "lucide-react";
+import { Calendar, Users, Building, Laptop, Code } from "lucide-react";
+import { motion } from "framer-motion";
+
+
 
 const Experience = () => {
   const experiences = [
     {
       company: "Cognizant",
-      role: "Solution Architect",
+      role: "Solution Architect ",
       duration: "2008 - Present",
       location: "Hyderabad, India",
       description: "Leading digital transformation initiatives and Power Platform implementations for Fortune 500 clients.",
@@ -94,70 +97,87 @@ const Experience = () => {
             {/* Timeline Line */}
             <div className="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-green-500 to-teal-500"></div>
 
-            {experiences.map((exp, index) => (
-              <div
-                key={index}
-                className={`relative mb-16 animate-fade-in ${
-                  index % 2 === 0 ? "md:pr-1/2 md:text-right" : "md:pl-1/2 md:ml-8"
-                }`}
-                style={{ animationDelay: `${index * 200}ms` }}
-              >
-                {/* Timeline Dot */}
-                <div className="absolute left-2 md:left-1/2 md:transform md:-translate-x-1/2 -translate-y-1 w-4 h-4 bg-gradient-to-br from-green-500 to-teal-500 rounded-full border-4 border-background shadow-lg"></div>
+            <div className="relative flex flex-col md:block">
+  {/* Vertical Timeline Line */}
+  <div className="hidden md:block absolute left-1/2 top-0 h-full w-1 bg-gradient-to-b from-green-100 to-green-300 dark:from-green-900/20 dark:to-green-800/20 transform -translate-x-1/2"></div>
 
-                {/* Content Card */}
-                <div className="ml-12 md:ml-0 bg-card rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-green-100 dark:border-green-900/30">
-                  {/* Header */}
-                  <div className="mb-4">
-                    <h3 className="text-2xl font-bold text-green-600 mb-1">{exp.role}</h3>
-                    <h4 className="text-xl font-semibold mb-2">{exp.company}</h4>
-                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center text-sm text-muted-foreground">
-                      <span className="font-medium flex items-center">
-                        <Calendar className="w-4 h-4 mr-1" />
-                        {exp.duration}
-                      </span>
-                      <span className="flex items-center">
-                        <Building className="w-4 h-4 mr-1" />
-                        {exp.location}
-                      </span>
-                    </div>
-                  </div>
+  {experiences.map((exp, index) => {
+    const isLeft = index % 2 === 0;
 
-                  {/* Description */}
-                  <p className="text-muted-foreground mb-4 leading-relaxed">
-                    {exp.description}
-                  </p>
+    return (
+      <motion.div
+        key={index}
+        className={`relative mb-16 md:w-1/2 ${
+          isLeft ? "md:mr-auto md:text-right" : "md:ml-auto md:text-left"
+        }`}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: index * 0.1 }}
+      >
+        {/* Timeline Dot */}
+        <div className="absolute left-2 md:left-1/2 transform -translate-x-1/2 -translate-y-1 w-4 h-4 bg-gradient-to-br from-green-500 to-teal-500 rounded-full border-4 border-background shadow-lg z-10"></div>
 
-                  {/* Highlights */}
-                  <div className="mb-4">
-                    <h5 className="font-semibold mb-2">Key Achievements:</h5>
-                    <ul className="space-y-1">
-                      {exp.highlights.map((highlight, idx) => (
-                        <li key={idx} className="text-sm text-muted-foreground flex items-start">
-                          <span className="text-green-500 mr-2 mt-1">•</span>
-                          {highlight}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+        {/* Experience Card */}
+        <div className="bg-card rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-green-100 dark:border-green-900/30">
+          {/* Header with Optional Role Icon */}
+          <div className={`mb-4 flex items-center ${isLeft ? "justify-end" : "justify-start"}`}>
+            {exp.role === "Developer" && <Laptop className="w-5 h-5 text-green-500 mr-2" />}
+            {exp.role === "Team Lead" && <Users className="w-5 h-5 text-green-500 mr-2" />}
+            {exp.role === "Solution Architect" && <Code className="w-5 h-5 text-green-500 mr-2" />}
+            <h3 className="text-2xl font-bold text-green-600">{exp.role}</h3>
+          </div>
 
-                  {/* Technologies */}
-                  <div>
-                    <h5 className="font-semibold mb-2">Technologies:</h5>
-                    <div className="flex flex-wrap gap-2">
-                      {exp.technologies.map((tech, idx) => (
-                        <span
-                          key={idx}
-                          className="px-3 py-1 bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300 rounded-full text-xs font-medium"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
+          <h4 className="text-xl font-semibold mb-2">{exp.company}</h4>
+
+          {/* Duration & Location */}
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center text-sm text-muted-foreground mb-4">
+            <span className="font-medium flex items-center">
+              <Calendar className="w-4 h-4 mr-1" />
+              {exp.duration}
+            </span>
+            <span className="flex items-center">
+              <Building className="w-4 h-4 mr-1" />
+              {exp.location}
+            </span>
+          </div>
+
+          {/* Description */}
+          <p className="text-muted-foreground mb-4 leading-relaxed">{exp.description}</p>
+
+          {/* Highlights */}
+          <div className="mb-4">
+            <h5 className="font-semibold mb-2">Key Achievements:</h5>
+            <ul className="space-y-1">
+              {exp.highlights.map((highlight, idx) => (
+                <li key={idx} className="text-sm text-muted-foreground flex items-start">
+                  <span className="text-green-500 mr-2 mt-1">•</span>
+                  {highlight}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Technologies */}
+          <div>
+            <h5 className="font-semibold mb-2">Technologies:</h5>
+            <div className="flex flex-wrap gap-2">
+              {exp.technologies.map((tech, idx) => (
+                <span
+                  key={idx}
+                  className="px-3 py-1 bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300 rounded-full text-xs font-medium"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    );
+  })}
+</div>
+
           </div>
 
           {/* Summary Stats */}

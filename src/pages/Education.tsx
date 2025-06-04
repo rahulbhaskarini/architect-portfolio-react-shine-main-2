@@ -16,7 +16,7 @@ const Education = () => {
         "Participated in inter-collegiate programming competitions"
       ],
       description: "Comprehensive Electronics and Communication education along with fundamentals of programming, algorithms, data structures, database systems, and software engineering principles.",
-      logo: "🎓"
+      logo: "/assets/NITWLogo.png"
     },
     {
       degree: "AI/ML Specialization",
@@ -32,7 +32,7 @@ const Education = () => {
         "Received recognition for innovative AI solution design"
       ],
       description: "Advanced specialization program focusing on cutting-edge AI/ML technologies, practical applications, and their integration with enterprise systems.",
-      logo: "🤖"
+      logo: "/assets/IIITHyderabadLogo.jpg"
     }
   ];
 
@@ -135,7 +135,7 @@ const Education = () => {
                     {/* Institution Info */}
                     <div className="lg:col-span-2">
                       <div className="flex items-start space-x-4 mb-6">
-                        <div className="text-5xl">{edu.logo}</div>
+                        <div className="text-5xl"><div className="w-36 h-36"><img src={edu.logo} className="w-full h-full object-contain"></img></div></div>
                         <div>
                           <h3 className="text-2xl font-bold text-emerald-600 mb-1">{edu.degree}</h3>
                           <h4 className="text-xl font-semibold mb-2">{edu.field}</h4>
@@ -167,7 +167,7 @@ const Education = () => {
                     {/* Visual Element */}
                     <div className="flex items-center justify-center">
                       <div className="w-48 h-48 bg-gradient-to-br from-emerald-100 to-cyan-100 dark:from-emerald-900/30 dark:to-cyan-900/30 rounded-full flex items-center justify-center border-4 border-white dark:border-gray-800 shadow-lg">
-                        <div className="text-6xl opacity-50">{edu.logo}</div>
+                        <div className="text-6xl opacity-50"><div className="w-36 h-36"><img src={edu.logo} className="w-full h-full object-contain"></img></div></div>
                       </div>
                     </div>
                   </div>
