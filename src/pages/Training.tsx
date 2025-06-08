@@ -7,7 +7,7 @@ const Training = () => {
       title: "Power Platform Fundamentals",
       type: "Corporate Training",
       duration: "3 Days",
-      participants: "150+",
+      participants: "15+",
       description: "Comprehensive introduction to Microsoft Power Platform covering Power Apps, Power BI, and Power Automate fundamentals.",
       topics: [
         "Power Apps canvas and model-driven app development",
@@ -21,7 +21,7 @@ const Training = () => {
       title: "Advanced SPFx Development",
       type: "Technical Workshop",
       duration: "2 Days",
-      participants: "80+",
+      participants: "10+",
       description: "Deep-dive into SharePoint Framework development using React, TypeScript, and modern web technologies.",
       topics: [
         "SPFx architecture and development lifecycle",
@@ -49,7 +49,7 @@ const Training = () => {
       title: "Modern SharePoint Architecture",
       type: "Certification Program",
       duration: "5 Days",
-      participants: "200+",
+      participants: "20+",
       description: "Comprehensive training on modern SharePoint architecture, governance, and best practices.",
       topics: [
         "SharePoint Online architecture and planning",

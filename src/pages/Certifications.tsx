@@ -22,7 +22,7 @@ const Certifications = () => {
       badge: "🤖",
       level: "Specialization"
     },
-    {
+    /*{
       name: "Microsoft Certified: Azure Solutions Architect Expert",
       issuer: "Microsoft",
       year: "2021",
@@ -51,7 +51,7 @@ const Certifications = () => {
       skills: ["AWS Architecture", "Distributed Systems", "High Availability", "Disaster Recovery", "Cost Optimization"],
       badge: "🔧",
       level: "Professional"
-    },
+    },*/
     {
       name: "Google Cloud Professional Cloud Architect",
       issuer: "Google Cloud",
@@ -72,7 +72,7 @@ const Certifications = () => {
       badge: "🛡️",
       level: "Expert"
     },
-    {
+    /*{
       name: "Certified Kubernetes Administrator (CKA)",
       issuer: "Cloud Native Computing Foundation",
       year: "2022",
@@ -81,7 +81,7 @@ const Certifications = () => {
       skills: ["Kubernetes", "Container Orchestration", "Cluster Management", "Networking", "Security"],
       badge: "⚙️",
       level: "Professional"
-    }
+    }*/
   ];
 
   const certificationsByLevel = {
